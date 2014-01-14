@@ -1,0 +1,17 @@
+<html ng-app>
+	<head>
+		<title>Segundo exemplo - Angulas JS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/second-example.js"></script>
+	</head>
+	<body ng-controller="SecondExampleController">
+		<br />
+ 		<div>
+	      <label>Nome:</label>
+	      <input type="text" ng-model="name" placeholder="Digite seu nome"> <button class="btn btn-primary" ng-click="checkTwoWayDataBinding()">OK</button>
+	      <hr>
+	      <h1>Ola {{name}}</h1>
+	    </div>
+	</body>
+</html>
