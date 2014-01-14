@@ -29,3 +29,18 @@ function Colaborador(args){
 	this.nome = args.nome || "";
 	this.data = args.data || "";	
 }
+
+crudModule.directive('datepicker', function() {
+  return function(scope, element, attrs) {
+    element.datepicker({
+      dateFormat: 'dd/mm/yy',
+      constrainInput: true,   
+      showAnim : 'clip',
+      showSpeed : 'slow',
+      showWeeks: true,
+      onSelect : function(dateText, elem){
+        $(this).trigger('input');
+      }
+    });
+   }
+});
