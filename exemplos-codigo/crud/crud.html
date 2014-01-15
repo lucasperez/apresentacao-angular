@@ -36,7 +36,7 @@
 			<h1>Colaboradores</h1>
 			<hr>
 
-			<!--Search: <input type="text" ng-model="search">-->
+			Search: <input type="text" ng-model="search">
 			<table class="table">
 				<thead>
 					<th>Nome</th>
@@ -44,7 +44,7 @@
 					<th>Ações</th>
 				</thead>
 				<tbody>
-					<tr ng-repeat="colaborador in colaboradores">
+					<tr ng-repeat="colaborador in colaboradores | filter: search">
 						<td>{{colaborador.nome}}</td>
 						<td>{{colaborador.data}}</td>
 						<td>
